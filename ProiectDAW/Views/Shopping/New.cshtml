@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Lista noua";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>Formular cumparaturi</p>
+
+<form method="post" action="/Shopping/New">
+
+    <label> Data </label>
+    <br />
+    <input type="text" name="Date" />
+    <br /><br />
+
+    <label> Suma totala cheltuita </label>
+    <br />
+    <input type="text" name="Price" />
+    <br /><br />
+
+
+    <label> Lista cumparaturilor </label>
+    <br />
+    <input type="text" name="Basket" />
+    <br />
+
+    <button type="submit">Introduce cumparaturi</button>
+
+</form>

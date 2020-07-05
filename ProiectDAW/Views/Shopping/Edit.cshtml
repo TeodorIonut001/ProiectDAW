@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Edit"; }
+<h2>Edit</h2>
+<p>Formulat</p>
+<form method="post" action="/Shopping/Edit/@ViewBag.Shoppings.Id">
+    @Html.HttpMethodOverride(HttpVerbs.Put)
+
+    <label>Data</label>
+    <br /> <input type="text" name="Date" value="@ViewBag.Shoppings.Date" />
+    <br /><br />
+    <label>Suma totala cheltuita</label>
+    <br /> <input type="text" name="Price" value="@ViewBag.Shoppings.Price" />
+    <br /><br />
+    <label>Detalii</label>
+    <br /> <input type="text" name="Basket" value="@ViewBag.Shoppings.Basket" />
+       
+    <br />
+    <br />
+
+    <button type="submit">Modifica cumparaturi</button>
+</form>

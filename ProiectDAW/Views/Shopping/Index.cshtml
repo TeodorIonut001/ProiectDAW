@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Lista cumparaturi";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<p>@TempData["message"]</p>
+
+<a href="/Shopping/New">Adauga alta zi</a>
+<br />
+
+@foreach (var shopping in ViewBag.Shoppings)
+{<div class="row">
+
+
+    <p>@shopping.Date</p>
+    <p>@shopping.Price</p>
+    <p>@shopping.Basket</p>
+    <a href="/Shopping/Edit/@shopping.Id">Editeaza</a>
+    <form method="post" action="~/Shopping/Delete/@shopping.Id">
+        @Html.HttpMethodOverride(HttpVerbs.Delete)
+        <button type="submit">Sterge ziua</button>
+    </form>
+    <br />
+    <br />
+    <br />
+
+</div>
+
+}
+
+<a href="/Shopping/New">Adauga alta zi</a>
+<br />
+
